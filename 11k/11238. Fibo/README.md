@@ -40,3 +40,7 @@
 
  <p>For each test case, print a line contains value of gcd(F<sub>n</sub>,F<sub>m</sub>) modulo by 1000000 007</p>
 
+### *My comments*
+
+11728번 문제랑 똑같다. 그나저나 피보나치 수열 구하려고 이렇게까지 해야 한다고?
+
