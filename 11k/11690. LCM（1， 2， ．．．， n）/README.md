@@ -28,7 +28,5 @@
 
 ### *My comments*
 
-I hate this problem. Maybe It's impossible to solve this problem whih python in my level.
-
-
+I hate this problem. Maybe It's impossible to solve this problem with python in my level.
 
