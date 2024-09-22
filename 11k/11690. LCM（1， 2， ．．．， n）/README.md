@@ -26,3 +26,9 @@
 
  <p>첫째 줄에 1보다 크거나 같고, n보다 작거나 같은 모든 자연수의 최소공배수를 출력한다. 정답이 매우 커질 수 있기 때문에, 2<sup>32</sup>로 나눈 나머지를 출력한다.</p>
 
+### *My comments*
+
+I hate this problem. Maybe It's impossible to solve this problem whih python in my level.
+
+
+
