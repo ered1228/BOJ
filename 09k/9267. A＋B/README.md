@@ -30,3 +30,7 @@
 
  <p>두 셀 중 하나에 <code>S</code>가 저장되는 프로그램을 만들 수 있으면 YES를, 없으면 NO를 출력한다.</p>
 
+### *My comments*
+
+I hate the EEA algorithm.
+
