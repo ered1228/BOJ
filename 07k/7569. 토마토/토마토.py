@@ -1,19 +1,18 @@
 from collections import deque
 
-def candidate(x, y, z):
-    return [(x+1, y, z), (x-1, y, z), (x, y+1, z), (x, y-1, z), (x, y, z+1), (x, y, z-1)]
-
 def BFS(box, first_tomatos):
-    queue = deque([(a, b, c, 0) for a, b, c in first_tomatos])
+    queue = deque([(x, y, z, 0) for x, y, z in first_tomatos])
     maxcnt = 0
     
     while queue:
-        z, x, y, cnt = queue.popleft()
-        for tz, tx, ty in candidate(z, x, y):
-            if 0 <= tz < h and 0 <= tx < n and 0 <= ty < m:
-                if box[tz][tx][ty] == 0:
-                    box[tz][tx][ty] = 1
-                    queue.append((tz, tx, ty, cnt+1))
+        x, y, z, cnt = queue.popleft()
+        candidate = [(x+1, y, z), (x-1, y, z), (x, y+1, z), (x, y-1, z), (x, y, z+1), (x, y, z-1)]
+        for c in candidate:
+            tx = c[0] ; ty = c[1] ; tz = c[2]
+            if (0 <= tx < h) and (0 <= ty < n) and (0 <= tz < m):
+                if box[tx][ty][tz] == 0:
+                    box[tx][ty][tz] = 1
+                    queue.append((tx, ty, tz, cnt+1))
                     maxcnt = max(maxcnt, cnt+1)
     return maxcnt, box
 
@@ -26,8 +25,7 @@ def zero_count(box):
     return True
 
 m, n, h = map(int, input().split())
-box = []
-first_tomatos = []
+box = [] ; first_tomatos = []
 
 for k in range(h):
     layer = []
