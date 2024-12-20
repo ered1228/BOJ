@@ -24,6 +24,6 @@ for _ in range(ine):
     jingburger.append([jururu for jururu in str(input())])
 
 for lilpa in range(ine):
-    goesgu = ISD(lilpa)
-    viichan = max(viichan, goesgu)
+    gosegu = ISD(lilpa)
+    viichan = max(viichan, gosegu)
 print(viichan)
