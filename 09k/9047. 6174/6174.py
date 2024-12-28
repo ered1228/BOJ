@@ -7,7 +7,7 @@ def Kaprekar(n, cnt):
     elif len(n) == 2:
         n = '00' + n
     elif len(n) == 3:
-        n += '0' + n
+        n = '0' + n
     if n == '6174':
         return cnt
     else:
