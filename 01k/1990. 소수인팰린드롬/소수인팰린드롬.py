@@ -37,7 +37,7 @@ for i in range(1, l+1, 2):
             if prime_judge(temp):
                 prime.append(temp)
 
-for p in sorted(prime):
+for p in prime:
     if a <= p <= b:
         print(p)
 print(-1)
