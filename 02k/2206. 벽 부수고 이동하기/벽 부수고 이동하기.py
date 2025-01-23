@@ -12,6 +12,7 @@ di = [0, 0, 1, -1]
 dj = [1, -1, 0, 0]
 while queue:
     r, c, cost = queue.popleft()
+    #print((r, c, cost))
     if r == n-1 and c == m-1:
         print(dist[r][c][cost])
         break
@@ -21,7 +22,9 @@ while queue:
         nc = c + dj[i]
         if not (0 <= nr < n and 0 <= nc < m):
             continue
-        if Map[nr][nc] == 1 and dist[nr][nc][1] == -1 and cost == 0:
+        if cost == 1 and dist[nr][nc][0] != -1:
+            continue
+        elif Map[nr][nc] == 1 and dist[nr][nc][1] == -1 and cost == 0:
             dist[nr][nc][1] = dist[r][c][0] + 1
             queue.append((nr, nc, 1))
         elif Map[nr][nc] == 0 and dist[nr][nc][cost] == -1:
